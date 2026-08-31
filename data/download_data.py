@@ -27,7 +27,7 @@ URL = (
 # SHA-256 of the CSV file as distributed by UCI (verify after extraction)
 # Run: python -c "import hashlib; print(hashlib.sha256(open('risk_factors_cervical_cancer.csv','rb').read()).hexdigest())"
 # on a fresh download and fill this in if you want checksum verification.
-EXPECTED_SHA256 = None  # Set to the hash string once you have it
+EXPECTED_SHA256 = "8df193ad5c9ff4288fb4c401eef70dcd2cbda404ce7f82ac74c68cfc960ab063"
 
 
 def sha256(path):
