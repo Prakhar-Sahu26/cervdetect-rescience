@@ -55,9 +55,10 @@ choice explicit and evaluate its effect through targeted sensitivity analyses.
 We find that the published confusion matrix reproduces exactly: ours is
 identical, cell for cell, across all 858 observations. The reproduced
 classifier assigns every observation to the negative class, and its accuracy is
-equal to the majority-class baseline. This behaviour is stable across random
-initialisations and across every interpretation of the ambiguous implementation
-details that we tested.
+equal to the majority-class baseline. The all-negative collapse is the modal outcome across random initialisations,
+though qualitatively different collapse modes are also observed. The result
+holds across every interpretation of the ambiguous implementation details that
+we tested.
 
 \section{Reproduction Methodology}\label{sec:methods}
 
@@ -540,10 +541,9 @@ validation epoch of 3 and termination at epoch~9. The interval between the two
 is six epochs in both cases, consistent with the stopping rule adopted in
 Section~\ref{sec:model}. This also bears on the discrepancy noted earlier
 between the original's text, which states one epoch, and its training figure,
-which shows nine: under a stopping rule of six consecutive validation failures,
-a figure terminating at epoch~9 is a total epoch count rather than a count of
-training iterations, and the two statements cannot both describe the same
-quantity.
+which shows nine. The six-epoch interval is consistent with the stopping rule
+adopted here, but does not establish how epochs were counted in the original
+implementation.
 
 \begin{figure}[!t]
 \centering
@@ -1087,9 +1087,9 @@ indicate that any alternative was considered.
 
 None of this is specific to the study reproduced here. The combination of a
 rare positive class, accuracy as the headline metric, no baseline comparison,
-and an unexamined default threshold is common enough that it forms a
-recognisable pattern, and it produces results that are simultaneously
-reproducible and uninformative. The corrective is inexpensive: a baseline
+and an unexamined default threshold has been documented as a source of
+misleading evaluation in imbalanced-classification literature, and it produces
+results that are simultaneously reproducible and uninformative. The corrective is inexpensive: a baseline
 figure alongside every accuracy, a threshold-free metric reported with its
 reference value, and some indication of variability across runs.
 
@@ -1102,12 +1102,9 @@ false-negative rate of 100\%: all 55 biopsy-positive records in the dataset are
 classified as negative.
 
 The asymmetry of costs in screening makes this more consequential than the
-accuracy figure suggests. A false positive typically results in further
-testing, which carries cost and anxiety but is recoverable. A false negative is
-a missed case, and in cervical cancer specifically the value of screening rests
-on detection at a stage when intervention is effective. A model that identifies
-no positive cases provides nothing that the decision to screen is intended to
-provide.
+accuracy figure suggests. A model with sensitivity zero provides no benefit
+over a rule that assigns every record to the negative class, regardless of its
+headline accuracy.
 
 The reported false-positive rate warrants comment for the same reason. A
 false-positive rate of zero appears favourable in isolation, but it is attained

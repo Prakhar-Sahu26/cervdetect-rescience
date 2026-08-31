@@ -19,9 +19,10 @@ https://doi.org/10.3389/fpubh.2021.788376
 The published confusion matrix reproduces exactly: 803 true negatives, 55
 false negatives, and zero true or false positives across all 858 observations.
 The reproduced classifier assigns every observation to the negative class, and
-its 93.6% accuracy equals the majority-class baseline. This behaviour is stable
-across 30 random seeds and all 12 interpretations of the original's ambiguous
-implementation choices. The original's Table 4 reports a true-positive rate of
+its 93.6% accuracy equals the majority-class baseline. The all-negative collapse is the modal outcome
+across 30 random seeds, though qualitatively different collapse modes are also
+observed. The behaviour holds across all 12 interpretations of the original's
+ambiguous implementation choices. The original's Table 4 reports a true-positive rate of
 100%, which is inconsistent with its own published confusion matrix.
 
 ---
@@ -79,8 +80,10 @@ notebooks/Cervical_Cancer_Detection_Reproduction.ipynb
 ```
 
 Open it in Google Colab (recommended) or Jupyter. Run all cells in order.
-The notebook downloads nothing automatically — run `data/download_data.py`
-first and upload the CSV to `/content/` in Colab.
+The notebook does not download data automatically. Run `data/download_data.py`
+first; it saves the CSV to `data/risk_factors_cervical_cancer.csv`. In Colab,
+upload that CSV to `/content/risk_factors_cervical_cancer.csv` after
+downloading it locally.
 
 **Expected runtime:** approximately 20–30 minutes on a Colab T4 GPU for the
 full 30-seed stability sweep and 12-configuration grid.

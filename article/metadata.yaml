@@ -59,8 +59,9 @@ abstract: |
   cell, across all 858 observations, with 803 true negatives, 55 false negatives,
   and zero true or false positives. The reproduced classifier therefore assigns
   every observation to the negative class, and its 93.6% accuracy equals the
-  majority-class baseline exactly. The behaviour is stable across random
-  initialisations rather than incidental. We further find that the original's
+  majority-class baseline exactly. The all-negative collapse is the modal
+  outcome across random initialisations, though qualitatively different collapse
+  modes are also observed. We further find that the original's
   Table 4 reports a true-positive rate of 100%, which cannot be derived from its
   own published confusion matrix. We conclude that the reported accuracy is
   reproducible but uninformative, and that the study's detection claims are not

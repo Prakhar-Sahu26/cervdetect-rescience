@@ -14,7 +14,6 @@ article/*.fls
 article/*.fdb_latexmk
 article/*.synctex.gz
 article/metadata.tex
-article/header.tex
 
 # Python
 __pycache__/
