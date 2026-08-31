@@ -1,0 +1,16 @@
+# Pinned to the versions used in the Colab environment (Python 3.10, CUDA 12.8)
+# recorded from notebook output on 2026-08-31.
+#
+# Confirmed from notebook outputs:
+torch==2.11.0
+pandas==2.2.3
+#
+# The following were present in the Colab environment but exact versions were
+# not printed in the notebook. Pins below are the Colab defaults bundled with
+# the above torch version; update after running:
+#   python -c "import numpy, sklearn, matplotlib, seaborn; \
+#     print(numpy.__version__, sklearn.__version__, matplotlib.__version__, seaborn.__version__)"
+numpy>=1.26.0
+scikit-learn>=1.5.0
+matplotlib>=3.9.0
+seaborn>=0.13.0

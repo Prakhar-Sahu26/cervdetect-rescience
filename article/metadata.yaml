@@ -1,0 +1,122 @@
+# To be filled by the author(s) at the time of submission
+# -------------------------------------------------------
+
+# Title of the article:
+#  - For a successful replication, it should be prefixed with "[Re]"
+#  - For a failed replication, it should be prefixed with "[Not Re]"
+title: "[Re] Machine Learning Assisted Cervical Cancer Detection: Reproduction and Evaluation Analysis"
+
+# List of authors with name, orcid number, email and affiliation
+# Affiliation "*" means contact author (required even for single-authored papers)
+authors:
+  - name: Prakhar Sahu
+    orcid: 0009-0004-1345-3612
+    email: prakhar.26.sahu@gmail.com
+    affiliations: 1,*
+
+  - name: Prakhar Sudele
+    orcid: 0000-0000-0000-0000   # TODO: replace with real ORCID or leave blank
+    email: prakharsudele36@gmail.com
+    affiliations: 1
+
+# List of affiliations with code (corresponding to author affiliations), name
+# and address.
+affiliations:
+  - code:    1
+    name:    Independent Researcher
+    address: India
+
+# List of keywords (adding the programming language is a good idea)
+keywords: machine learning, cervical cancer, replication, neural network, random forest, class imbalance, Python
+
+# Code URL and DOI/SWH (url is mandatory for replication, doi after acceptance)
+code:
+  - url: https://github.com/Prakhar-Sahu26/cervdetect-rescience
+  - doi:
+  - swh:
+
+# Data URL and DOI (optional if no data)
+data:
+  - url: https://archive.ics.uci.edu/dataset/383/cervical+cancer+risk+factors
+  - doi:
+
+# Information about the original article that has been replicated
+replication:
+ - cite: "Mehmood, A., Maqsood, M., Bashir, M., & Shuyuan, Y. (2021). Machine Learning Assisted Cervical Cancer Detection. Frontiers in Public Health, 9, 788376."
+ - bib:  mehmood2021
+ - url:  https://doi.org/10.3389/fpubh.2021.788376
+ - doi:  10.3389/fpubh.2021.788376
+
+# Don't forget to surround abstract with double quotes
+abstract: |
+  "We report a replication of Machine Learning Assisted Cervical Cancer Detection
+  (Mehmood et al., Frontiers in Public Health, 2021), which proposes CervDetect,
+  a pipeline combining Random Forest feature selection with a shallow neural
+  network to predict cervical cancer biopsy outcomes from the UCI risk-factor
+  dataset. We reimplemented the preprocessing, feature-selection and
+  classification stages in open-source software from the published description.
+  The published confusion matrix reproduces exactly: ours is identical, cell for
+  cell, across all 858 observations, with 803 true negatives, 55 false negatives,
+  and zero true or false positives. The reproduced classifier therefore assigns
+  every observation to the negative class, and its 93.6% accuracy equals the
+  majority-class baseline exactly. The behaviour is stable across random
+  initialisations rather than incidental. We further find that the original's
+  Table 4 reports a true-positive rate of 100%, which cannot be derived from its
+  own published confusion matrix. We conclude that the reported accuracy is
+  reproducible but uninformative, and that the study's detection claims are not
+  supported by its own results."
+
+# Bibliography file (yours)
+bibliography: bibliography.bib
+
+# Type of the article
+# Type can be:
+#  * Editorial
+#  * Letter
+#  * Replication
+type: Replication
+
+# Scientific domain of the article (e.g. Computational Neuroscience)
+#  (one domain only & try to be not overly specific)
+domain: Machine Learning
+
+# Coding language (main one only if several)
+language: Python
+
+
+# To be filled by the author(s) after acceptance
+# -----------------------------------------------------------------------------
+
+# For example, the URL of the GitHub issue where review actually occured
+review:
+  - url:
+
+contributors:
+  - name:
+    orcid:
+    role: editor
+  - name:
+    orcid:
+    role: reviewer
+  - name:
+    orcid:
+    role: reviewer
+
+# This information will be provided by the editor
+dates:
+  - received:
+  - accepted:
+  - published:
+
+# This information will be provided by the editor
+article:
+  - number:
+  - doi:
+  - url:
+
+# This information will be provided by the editor
+journal:
+  - name:   "ReScience C"
+  - issn:   2430-3658
+  - volume:
+  - issue:

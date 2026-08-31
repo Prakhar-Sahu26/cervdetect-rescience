@@ -1,0 +1,35 @@
+# Dataset — not redistributed; download with data/download_data.py
+data/*.csv
+data/*.zip
+data/*.arff
+
+# LaTeX build artefacts
+article/*.aux
+article/*.bbl
+article/*.blg
+article/*.log
+article/*.out
+article/*.pdf
+article/*.fls
+article/*.fdb_latexmk
+article/*.synctex.gz
+article/metadata.tex
+article/header.tex
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.swp
