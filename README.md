@@ -66,7 +66,7 @@ https://archive.ics.uci.edu/dataset/383/cervical+cancer+risk+factors
 pip install -r requirements.txt
 ```
 
-Tested on Python 3.10, CUDA 12.8, PyTorch 2.11.0, pandas 2.2.3.
+Tested on Python 3.13.15, CUDA 12.8, PyTorch 2.11.0+cu128, pandas 2.2.3, GPU: Tesla T4.
 The notebook was developed and run in Google Colab.
 
 ---
