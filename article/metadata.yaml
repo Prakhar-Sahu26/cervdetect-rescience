@@ -49,7 +49,7 @@ replication:
 
 # Don't forget to surround abstract with double quotes
 abstract: |
-  "We report a replication of Machine Learning Assisted Cervical Cancer Detection
+  We report a replication of Machine Learning Assisted Cervical Cancer Detection
   (Mehmood et al., Frontiers in Public Health, 2021), which proposes CervDetect,
   a pipeline combining Random Forest feature selection with a shallow neural
   network to predict cervical cancer biopsy outcomes from the UCI risk-factor
@@ -65,7 +65,7 @@ abstract: |
   Table 4 reports a true-positive rate of 100%, which cannot be derived from its
   own published confusion matrix. We conclude that the reported accuracy is
   reproducible but uninformative, and that the study's detection claims are not
-  supported by its own results."
+  supported by its own results.
 
 # Bibliography file (yours)
 bibliography: bibliography.bib

@@ -66,7 +66,9 @@ https://archive.ics.uci.edu/dataset/383/cervical+cancer+risk+factors
 pip install -r requirements.txt
 ```
 
-Tested on Python 3.13.15, CUDA 12.8, PyTorch 2.11.0+cu128, pandas 2.2.3, GPU: Tesla T4.
+Tested on Python 3.13.15, PyTorch 2.11.0 (CUDA runtime 12.8), pandas 2.2.3,
+NumPy 2.1.3, scikit-learn 1.6.1, Matplotlib 3.10.0, seaborn 0.13.2,
+NVIDIA Tesla T4, NVIDIA driver 580.82.07.
 The notebook was developed and run in Google Colab.
 
 ---
@@ -80,13 +82,19 @@ notebooks/Cervical_Cancer_Detection_Reproduction.ipynb
 ```
 
 Open it in Google Colab (recommended) or Jupyter. Run all cells in order.
-The notebook does not download data automatically. Run `data/download_data.py`
-first; it saves the CSV to `data/risk_factors_cervical_cancer.csv`. In Colab,
-upload that CSV to `/content/risk_factors_cervical_cancer.csv` after
-downloading it locally.
+The notebook does not download data automatically.
 
-**Expected runtime:** approximately 20–30 minutes on a Colab T4 GPU for the
-full 30-seed stability sweep and 12-configuration grid.
+**Locally (Jupyter):** Run `python data/download_data.py` first. The CSV is
+saved to `data/risk_factors_cervical_cancer.csv`, which the notebook finds
+automatically.
+
+**Google Colab:** Run `data/download_data.py` locally to obtain the CSV, then
+upload `risk_factors_cervical_cancer.csv` to `/content/` in the Colab runtime.
+The notebook resolves whichever path exists at runtime.
+
+**Expected runtime:** The complete notebook runs in approximately 1–2 minutes
+on the tested Google Colab environment with an NVIDIA Tesla T4 GPU. Runtime may
+vary depending on the hardware and environment.
 
 ---
 
@@ -128,5 +136,8 @@ cd article && make
 ## License
 
 Code: MIT — see [LICENSE](LICENSE)
-Article text (`article/`): CC BY 4.0
-ReScience template files (`rescience.cls`, etc.): GPL-3.0
+Article text (`article/content.tex` etc.): CC BY 4.0
+ReScience template source files (`rescience.cls`, `article.tex`, etc.): GPL-3.0
+Bundled fonts (`article/roboto/`, `article/source-*/`): Apache 2.0 (Roboto) /
+SIL OFL 1.1 (Source Code Pro, Source Sans Pro, Source Serif Pro)
+See [LICENSE](LICENSE) for details.

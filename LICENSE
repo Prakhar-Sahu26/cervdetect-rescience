@@ -22,10 +22,24 @@ SOFTWARE.
 
 ---
 
-The article manuscript in article/ is licensed separately under CC BY 4.0.
+The article manuscript (article/content.tex, article/metadata.yaml,
+article/bibliography.bib) is licensed separately under CC BY 4.0.
 See https://creativecommons.org/licenses/by/4.0/
 
-The ReScience template files (rescience.cls, yaml-to-latex.py, Makefile,
-article.tex) and font files in article/ are from the ReScience/template
-repository and licensed under GPL-3.0. See
-https://github.com/ReScience/template/blob/master/COPYING
+---
+
+Third-party components bundled from the ReScience/template repository carry
+their own licenses:
+
+  ReScience template source files (rescience.cls, article.tex,
+  yaml-to-latex.py, article.py, header.tex, Makefile):
+    GPL-3.0 — see article/COPYING (from the upstream template repository at
+    https://github.com/ReScience/template)
+
+  Bundled font files (article/roboto/, article/source-code-pro/,
+  article/source-sans-pro/, article/source-serif-pro/):
+    Each font family is distributed under its own upstream license. Roboto is
+    licensed under the Apache License 2.0; the Source family fonts (Source Code
+    Pro, Source Sans Pro, Source Serif Pro) are licensed under the SIL Open
+    Font License 1.1. See the LICENSE or OFL.txt files within each font
+    subdirectory for the authoritative terms.

@@ -334,7 +334,7 @@ an author. The scaler is fitted over all 858 rows, matching the toolbox
 behaviour of normalising before its internal partition; fitting on the training
 partition alone is retained as a sensitivity variant.
 
-The consequences of omitting this step are severe. The input variables differ
+Omitting this step has a measurable effect on the optimisation regime. The input variables differ
 by more than an order of magnitude in scale, from binary indicators to ages
 ranging from 13 to 84, and the mean Euclidean norm of an input row is 32.9.
 Under the initialisation of Algorithm~1 this yields hidden-layer
@@ -344,10 +344,11 @@ taken. By Equation~\eqref{eq:sigmoid-deriv} the mean sigmoid derivative in this
 regime is $0.0102$, against a maximum of $0.25$. Holding the initial weights
 fixed and rescaling the inputs alone, the pre-activation standard deviation
 falls to 2.9, the saturated fraction to 17.3\%, and the mean derivative rises
-to $0.0968$---a factor of approximately 9.5. Without normalisation the network
-therefore begins training in a strongly saturated regime with heavily
-attenuated gradients, which supplies a mechanistic account of the optimisation
-difficulty we observe in its absence (Section~\ref{sec:ranking}).
+to $0.0968$---a factor of approximately 9.5. Without normalisation the network begins training with approximately 90\% of
+hidden units in the saturated region and a mean sigmoid derivative
+approximately 9.5-fold smaller than with scaled inputs; this is consistent
+with the optimisation difficulty we observe in its absence
+(Section~\ref{sec:ranking}).
 
 \paragraph{Loss function.} The original specifies squared error in Algorithm~1
 and reports minimised cross-entropy in its results section. We use binary
@@ -1160,14 +1161,8 @@ computed on all 858 records including those later allocated to the test
 partition (Section~\ref{sec:features}). This constitutes information leakage
 from the test partition, and the test metrics we report are correspondingly
 optimistic; an unbiased evaluation would therefore be expected to perform no
-better. We additionally ran a split-first variant in which every imputation
-statistic, the Random Forest ranking and the scaler were fitted on the training
-partition alone. The classification behaviour was unchanged: the leak-free
-pipeline also assigns every test observation to the negative class. The
-inherited leakage therefore does not account for the reported result. The
-leak-free feature ranking does differ from the original-faithful one, since it
-is fitted on 600 records rather than 858. That variant is not itself a
-reproduction of the original, which specifies the leaky ordering.
+better. That variant is not itself a reproduction of the original, which
+specifies the leaky ordering.
 
 \paragraph{The reported mean squared error is not evaluated.} Because the
 original specifies squared error in one place and cross-entropy in another, we
