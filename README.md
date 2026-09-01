@@ -7,7 +7,7 @@ This repository contains the code, figures, and article manuscript for a
 reproduction study submitted to ReScience C.
 
 **Original paper replicated:**
-Mehmood, A., Maqsood, M., Bashir, M., & Shuyuan, Y. (2021).
+Mavra Mehmood, Muhammad Rizwan, Michal Gregus ml, Sidra Abbas.
 Machine Learning Assisted Cervical Cancer Detection.
 *Frontiers in Public Health*, 9, 788376.
 https://doi.org/10.3389/fpubh.2021.788376
