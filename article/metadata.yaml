@@ -41,7 +41,7 @@ data:
 
 # Information about the original article that has been replicated
 replication:
- - cite: "Mehmood, A., Maqsood, M., Bashir, M., & Shuyuan, Y. (2021). Machine Learning Assisted Cervical Cancer Detection. Frontiers in Public Health, 9, 788376."
+ - cite: "Mavra Mehmood, Muhammad Rizwan, Michal Gregus ml, Sidra Abbas. Machine Learning Assisted Cervical Cancer Detection. Frontiers in Public Health, 9, 788376."
  - bib:  mehmood2021
  - url:  https://doi.org/10.3389/fpubh.2021.788376
  - doi:  10.3389/fpubh.2021.788376
